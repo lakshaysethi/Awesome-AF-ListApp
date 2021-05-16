@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  font-size: large;
+}
+.list-item,input{
+  background-color: rgb(231, 243, 243);
+  padding: 20px;
+  margin: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.list-item.checked{
+  text-decoration: line-through;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+input{
+  font-size:large ;
+  width:  -webkit-fill-available;;
+}
