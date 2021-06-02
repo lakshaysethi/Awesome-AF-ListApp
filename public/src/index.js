@@ -84,7 +84,7 @@ document.body.style.backgroundColor = "black";
 
 }
 
-document.body.appendChild(darkmodebtn)
+listholder.before(darkmodebtn)
 
 darkmodebtn.innerHTML = "apply dark MODE"
 
