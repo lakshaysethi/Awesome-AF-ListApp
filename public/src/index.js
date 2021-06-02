@@ -73,3 +73,15 @@ window.onbeforeunload = function(event) {
 };
 /******************************************local storage end */
 
+
+
+const darkmodebtn = document.createElement('button')
+
+darkmodebtn.onclick = ()=>{
+document.body.style.backgroundColor = "black";
+}
+
+document.body.appendChild(darkmodebtn)
+
+
+
