@@ -75,13 +75,17 @@ window.onbeforeunload = function(event) {
 
 
 
+
 const darkmodebtn = document.createElement('button')
 
 darkmodebtn.onclick = ()=>{
+
 document.body.style.backgroundColor = "black";
+
 }
 
 document.body.appendChild(darkmodebtn)
 
+darkmodebtn.innerHTML = "apply dark MODE"
 
 
