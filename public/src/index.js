@@ -36,7 +36,7 @@ function addNewListItem(text){
     newlistitem.classList.add ( 'list-item','noselect')
     newlistitem.addEventListener ('click',()=>newlistitem.classList.toggle('checked'))
     newlistitem.innerText=text
-    listholder.appendChild(newlistitem)
+    listholder.prependChild(newlistitem)
 }
 
 
