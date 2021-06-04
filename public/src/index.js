@@ -83,8 +83,8 @@ darkmodebtn.onclick = ()=>{
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
     let dark_style = document.createElement('style')
-    dark_style.innerHTML = 'input{ background-color: grey;}'
-    body.prepend(dark_style)
+    dark_style.innerHTML = 'input,.list-item{ background-color: grey;}'
+    document.body.prepend(dark_style)
 }
 
 listholder.before(darkmodebtn)
