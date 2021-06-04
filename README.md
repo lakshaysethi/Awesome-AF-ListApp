@@ -11,4 +11,9 @@ you can archieve and restore but never delete
 
 # todo
 
-add bootstrap or some way to grid
+1. add bootstrap or some way to grid
+2. delete one item from list 
+3. make sub lists
+4. breadcrums
+5. use this as base to make goals app
+6. 
