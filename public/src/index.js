@@ -36,7 +36,7 @@ function addNewListItem(text){
     newlistitem.classList.add ( 'list-item','noselect')
     newlistitem.addEventListener ('click',()=>newlistitem.classList.toggle('checked'))
     newlistitem.innerText=text
-    listholder.prependChild(newlistitem)
+    listholder.prepend(newlistitem)
 }
 
 
@@ -84,7 +84,7 @@ darkmodebtn.onclick = ()=>{
     document.body.style.color = "white";
     let dark_style = document.createElement('style')
     dark_style.innerHTML = 'input{ background-color: grey;}'
-    body.prependChild(dark_style)
+    body.prepend(dark_style)
 }
 
 listholder.before(darkmodebtn)
