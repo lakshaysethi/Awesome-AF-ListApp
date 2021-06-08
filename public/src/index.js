@@ -47,6 +47,7 @@ function addNewListItem(text){
     archive_icon.addEventListener('click',()=>{
         
     })
+    listholder.prepend(newlistitem)
 }
 
 
@@ -90,8 +91,11 @@ const darkmodebtn = document.createElement('button')
 
 darkmodebtn.onclick = ()=>{
 
-document.body.style.backgroundColor = "black";
-
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    let dark_style = document.createElement('style')
+    dark_style.innerHTML = 'input,.list-item{ background-color: grey;}'
+    document.body.prepend(dark_style)
 }
 
 listholder.before(darkmodebtn)
