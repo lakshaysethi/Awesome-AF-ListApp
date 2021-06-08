@@ -36,7 +36,17 @@ function addNewListItem(text){
     newlistitem.classList.add ( 'list-item','noselect')
     newlistitem.addEventListener ('click',()=>newlistitem.classList.toggle('checked'))
     newlistitem.innerText=text
+    archive_icon = document.createElement('div')
+    archive_icon.className = "archive_icon"
+    archive_icon_img = document.createElement('img')
+    archive_icon_img.src  = 'https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_archive_48px-512.png'
+    archive_icon_img.className = 'archive_icon_img'
+    archive_icon.appendChild(archive_icon_img)
+    newlistitem.appendChild(archive_icon)
     listholder.appendChild(newlistitem)
+    archive_icon.addEventListener('click',()=>{
+        
+    })
 }
 
 

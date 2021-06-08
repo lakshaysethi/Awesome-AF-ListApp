@@ -28,3 +28,17 @@ input{
   font-size:large ;
   width:  -webkit-fill-available;;
 }
+
+
+
+
+.archive_icon {
+  height: 30px;
+  width: 30px;
+  /* background-color: red; */
+  /* display: inline-block; */
+  float: right;
+}
+.archive_icon_img {
+  height: 100%;
+}
