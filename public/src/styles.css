@@ -47,3 +47,8 @@ input{
 .upside-down{
   transform: rotate(180deg); /* Equal to rotateZ(45deg) */
 }
+
+#show-main-list{
+  display:none;
+  font-size: large;
+}

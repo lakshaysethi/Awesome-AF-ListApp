@@ -4,6 +4,7 @@ let all_archived_items ={};
 all_archived_items.array =[]
 const myinput = document.getElementById('myinput')
 const listholder = document.getElementById('items-holder')
+const show_main_list_button = document.getElementById('show-main-list')
 
 if(localStorage.getItem('all_list_items')){
     all_list_items = JSON.parse (localStorage.getItem('all_list_items'))
@@ -91,21 +92,23 @@ function updateDOM(items,showArchieveButton = true){
 }
     
 const show_archieve_button = document.getElementById('clear-list')
+
 show_archieve_button.addEventListener('click',()=>{
-    // if(confirm('are you sure you want to delete all items from the list?')){
-    //     all_list_items.array = []
-    //     localStorage.setItem("all_list_items", JSON.stringify(all_list_items)); 
-    //     alert('done you can now reload the page to start a new list')
-        
-    // }   
-    
     updateDOM(all_archived_items,false)
+    show_main_list_button.style.display = 'block'
+    show_archieve_button.style.display = 'none'
+   
 })
 
 
 
 
-
+show_main_list_button.addEventListener('click',()=>{
+    updateDOM(all_list_items)
+    show_main_list_button.style.display = 'none'
+    show_archieve_button.style.display = 'block'
+    
+})
 
 
 
