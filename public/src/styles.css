@@ -42,3 +42,8 @@ input{
 .archive_icon_img {
   height: 100%;
 }
+
+
+.upside-down{
+  transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+}
