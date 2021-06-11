@@ -17,14 +17,14 @@ function addNewListItem_toDOM(text,showArchieveButton=true){
         unarchive_icon.classList.add('upside-down')
         newlistitem.appendChild(unarchive_icon)
         unarchive_icon.addEventListener('click',()=>{
-            let item_to_un_archieve = all_archived_items.array.pop(all_archived_items.array.indexOf(text))
+            let item_to_un_archieve = all_archived_items.array.splice(all_archived_items.array.indexOf(text),1)
             all_list_items.array.push(item_to_un_archieve)
             updateDOM(all_archived_items,false)
         })
         return listholder.prepend(newlistitem)
     }
     archive_icon.addEventListener('click',()=>{
-        let item_to_archieve = all_list_items.array.pop(all_list_items.array.indexOf(text))
+        let item_to_archieve = all_list_items.array.splice(all_list_items.array.indexOf(text),1)
         all_archived_items.array.push(item_to_archieve)
         updateDOM(all_list_items)
     })
