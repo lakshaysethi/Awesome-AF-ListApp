@@ -1,6 +1,8 @@
 body {
   font-family: sans-serif;
   font-size: large;
+background-color:"black";
+color:"white";
 }
 .list-item,input{
   background-color: rgb(231, 243, 243);
