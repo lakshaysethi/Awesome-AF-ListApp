@@ -24,15 +24,15 @@ show_main_list_button.addEventListener('click',()=>{
     
 })
 
-darkmodebtn.onclick = ()=>{
+Darkmodebtn.onclick = ()=>{
 
-    document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
     let dark_style = document.createElement('style')
     dark_style.innerHTML = 'input,.list-item{ background-color: grey;}'
     document.body.prepend(dark_style)
 }
-darkmodebtn.innerHTML = "apply dark MODE"
+darkmodebtn.innerHTML = "apply white MODE"
 
 listholder.before(darkmodebtn)
 
