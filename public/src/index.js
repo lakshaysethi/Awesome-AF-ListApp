@@ -24,7 +24,7 @@ show_main_list_button.addEventListener('click',()=>{
     
 })
 
-Darkmodebtn.onclick = ()=>{
+darkmodebtn.onclick = ()=>{
 
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
