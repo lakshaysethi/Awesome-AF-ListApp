@@ -23,3 +23,5 @@ body,html{
 .list-item p{
     text-align: left;
 }
+
+input,.list-item{ background-color: grey;}
