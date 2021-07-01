@@ -59,3 +59,10 @@ input{
   display:none;
   font-size: large;
 }
+
+
+#editable-title{
+  color: white;
+  background: black;
+  font-size: inherit;
+}
