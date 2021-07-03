@@ -36,3 +36,4 @@ darkmodebtn.innerHTML = "apply white MODE"
 
 listholder.before(darkmodebtn)
 
+registerServiceworker()
