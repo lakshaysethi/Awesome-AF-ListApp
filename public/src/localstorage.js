@@ -11,7 +11,5 @@ if(localStorage.getItem('all_archived_items')){
 }
 
 window.onbeforeunload = function(event) {
-    localStorage.setItem('all_archived_items', JSON.stringify(all_archived_items)); 
-    localStorage.setItem('all_list_items',JSON.stringify(all_list_items))
-
+    writetoLocalStorage()
 };
