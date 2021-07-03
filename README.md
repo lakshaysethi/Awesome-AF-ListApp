@@ -16,4 +16,5 @@ you can archieve and restore but never delete
 3. make sub lists
 4. breadcrums
 5. use this as base to make goals app
-6. 
+6. Edit
+7. Delete if Really needed
