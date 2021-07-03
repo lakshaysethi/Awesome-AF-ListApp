@@ -5,6 +5,7 @@
     "background_color": "#2196f3",
     "display": "standalone",
     "orientation": "portrait",
+    "description": "this is a basic list app that is plain awesome",
     "scope": "/",
     "start_url": "/",
     "icons":[
