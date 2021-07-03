@@ -6,6 +6,7 @@ myinput.addEventListener('keypress',(e)=>{
             all_list_items.array.push(myinput.value)
             addNewListItem_toDOM(all_list_items.array[all_list_items.array.length-1])
             myinput.value = ''
+writetoLocalStorage()
         }
     }
 })
