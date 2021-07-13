@@ -1,6 +1,6 @@
 server/venv/
 *.pyc
-
+*.sqlite3
 
 # Logs
 logs
