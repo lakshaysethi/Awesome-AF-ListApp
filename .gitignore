@@ -1,3 +1,7 @@
+server/venv/
+*.pyc
+
+
 # Logs
 logs
 *.log
