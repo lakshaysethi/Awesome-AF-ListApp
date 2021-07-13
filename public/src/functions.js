@@ -24,6 +24,7 @@ function addNewListItem_toDOM(text,showArchieveButton=true){
         return listholder.prepend(newlistitem)
     }
     archive_icon.addEventListener('click',()=>{
+        
         let item_to_archieve = all_list_items.array.splice(all_list_items.array.indexOf(text),1)
         all_archived_items.array.push(item_to_archieve)
         updateDOM(all_list_items)
@@ -68,3 +69,79 @@ function writetoLocalStorage(){
     localStorage.setItem('all_list_items',JSON.stringify(all_list_items))
 
 }
+
+
+
+function add_task_on_server(name){
+    var formdata = new FormData();
+    formdata.append("name", name);
+
+    var requestOptions = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow',
+        mode: 'no-cors',
+
+    };
+
+    fetch("http://127.0.0.1:8000/add", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+}
+
+
+
+
+function update_task_on_server(task_id,arch,done){
+    
+    var formdata = new FormData();
+    formdata.append("archieved", arch);
+    formdata.append("done", done);
+    formdata.append("task_id", task_id);
+
+    var requestOptions = {
+        method: 'POST',
+        // headers: myHeaders,
+        body: formdata,
+        redirect: 'follow',
+        mode: 'no-cors',
+
+    };
+
+    fetch(`${server}/update`, requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+}
+
+function get_tasks_from_server(){
+    
+    
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
+        mode: 'no-cors',
+       
+
+      };
+      
+      fetch("http://127.0.0.1:8000/get-list", requestOptions)
+        .then(response => console.log(response.text()))
+        .then(result => {console.log('result',result); addServerTasksToMyList(result);    })
+        .catch(error => console.log('error', error));
+
+       
+
+
+    }
+
+
+function addServerTasksToMyList(task_list_str){
+    console.log('str',task_list_str)
+    task_list_obj = JSON.parse(task_list_str)
+    array = task_list_obj.task_list
+    console.log(array)
+    // all_list_items.array += array
+}
+

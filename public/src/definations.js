@@ -8,3 +8,5 @@ const show_main_list_button = document.getElementById('show-main-list')
 const show_archieve_button = document.getElementById('clear-list')
 
 const darkmodebtn = document.createElement('button')
+
+const server = 'http://localhost:8000'

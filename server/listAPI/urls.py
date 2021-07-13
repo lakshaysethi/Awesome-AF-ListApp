@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from listAPIapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('get-list', views.get_list,name= 'get_user_list'),
+    path('add', views.add_new_task,name= 'new_task'),
+    path('update', views.update_task,name= 'update_task'),
+
 ]

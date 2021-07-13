@@ -3,6 +3,7 @@ myinput.addEventListener('keypress',(e)=>{
     
     if(e.key == 'Enter'){
         if(myinput.value !== ''){
+            
             all_list_items.array.push(myinput.value)
             addNewListItem_toDOM(all_list_items.array[all_list_items.array.length-1])
             myinput.value = ''
